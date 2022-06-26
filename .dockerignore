@@ -1,0 +1,7 @@
+**/.git
+**/.gitignore
+**/.vscode
+**/coverage
+Dockerfile.dev
+Dockerfile.prod
+README.md

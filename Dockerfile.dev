@@ -1,0 +1,23 @@
+# pull official base image
+FROM python:3.9-slim
+
+# set working directory
+WORKDIR /app
+
+# set environment variables
+# Prevents Python from writing pyc files to disk
+ENV PYTHONDONTWRITEBYTECODE 1
+# Prevents Python from buffering stdout and stderr
+ENV PYTHONUNBUFFERED 1
+
+# install system dependencies
+RUN apt-get update
+
+# install python dependencies
+COPY requirements-dev.txt .
+RUN pip install --no-cache-dir -r requirements-dev.txt
+
+# add app
+COPY . .
+
+ENTRYPOINT [ "bash" ]
