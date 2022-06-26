@@ -1,3 +1,8 @@
+"""
+cli.py contains logic to create a command line interface for the calculator
+"""
+
+
 import typer
 
 from rpn.calc import Calculator
@@ -8,6 +13,13 @@ def main(
         ..., help="Input Reverse Polish Notation expression to evaluate"
     ),
 ):
+    """Create a CLI using typer
+
+    Parameters
+    ----------
+    input_text : str, required
+        Input string, by default typer.Option( ..., help="Input Reverse Polish Notation expression to evaluate" )
+    """
     calc = Calculator()
     if input_text:
         typer.secho(f"Input Expression: {input_text}", fg=typer.colors.MAGENTA)

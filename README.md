@@ -10,6 +10,10 @@ The calculator should only accept whole numbers as inputs and it should only out
 
 ## Run Locally
 
+Pre-requisites:
+
+- [Docker installed](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script)
+
 Build a docker image
 
 ```bash
@@ -72,6 +76,8 @@ python3 cli.py --input-text "2 3 +"
 ```
 
 ### Command Line
+
+Either inside docker container (recommended) or on your system
 
 ```bash
 pip install -e .

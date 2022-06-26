@@ -10,7 +10,7 @@ setup(
     },
     license="LICENSE.md",
     description="RPN Calculator command line tool",
-    # long_description=open("README.md").read(),
+    long_description=open("README.md").read(),
     install_requires=[
         "typer >= 0.4.1",
     ],
