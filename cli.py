@@ -33,7 +33,7 @@ def main(
             if output is None:
                 typer.secho(
                     "Invalid RPN! Please try again with a valid RPN.",
-                    fg=typer.colors.red,
+                    fg=typer.colors.RED,
                 )
             else:
                 typer.secho(f"Answer: {output}", fg=typer.colors.GREEN)
